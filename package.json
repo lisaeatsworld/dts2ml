@@ -1,0 +1,16 @@
+{
+  "name": "dts2ml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "c8 mocha ./test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "c8": "^10.1.2",
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3"
+  }
+}
