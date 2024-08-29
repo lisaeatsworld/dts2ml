@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: # write-all
       # actions: write
       # attestations: write
       # checks: write
@@ -14,7 +14,7 @@ jobs:
       # discussions: write
       # packages: write
       # pages: write
-      # pull-requests: write
+      pull-requests: write
       # repository-projects: write
       # security-events: write
       # statuses: write
@@ -24,3 +24,5 @@ jobs:
         - run: npm ci
         - run: npm test
         - uses: romeovs/lcov-reporter-action@v0.4.0
+          with:
+            github-token: ${{ secrets.COV_REPORT }}
